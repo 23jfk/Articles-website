@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 100px 0 0 0;
+    padding: 0;
+    position: relative;
+    top: 100%;
+    background: #262626;
+}
+
+main div {
+    position: absolute;
+    top: 50%;
+    right: -30%;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    display: flex;
+}
+
+.row .rat {
+    direction: rtl;
+}
+
+.row div label {
+    display: block;
+    cursor: pointer;
+}
+
+.row div label::before {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 20px;
+    color: #101010;
+}
+
+.row div label:after {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 20px;
+    color: green;
+    top: 0;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.row div label:hover:after,
+.row div label:hover~label:after,
+.row div input:checked~label:after {
+    opacity: 1;
+}
+
+header .content-header {
+    position: absolute !important;
+    top: 0;
+    z-index: 9;
+}
+
+.shadow {
+    text-shadow: 2px 2px 1px black;
+}
+
+img.logo {
+    filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.5));
+    /*  */
+}
+
+div#carouselExampleControls img {
+    object-fit: cover;
+    height: 100vh !important;
+}
+
+.card-img-top {
+    height: 30vh;
+    margin: auto;
+}
+
+.writer .card img {
+    transition: all 1s;
+    /* height: 70vh; */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.writer .card img {
+    transition: .3s;
+    object-fit: contain;
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    transition: 0.8s ease;
+}
+
+.writer .card img:hover {
+    transform: scale(1.1);
+}
+
+.contact-form {
+    padding: 10px;
+    padding-right: 10px;
+    border: 1px solid green;
+    border-radius: 20px;
+}
+
+.contact-form .form-control {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid green;
+    padding: 5px;
+    margin: 5% 5% 5% 0;
+}
+
+.nav-item {
+    transition: 1s ease;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.nav-item.nav-link:hover {
+    color: #fff;
+    transform: scale(1.1);
+    background: green;
+}
+
+.txt {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 15%;
+}

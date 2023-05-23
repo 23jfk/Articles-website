@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        .contact-form {
+            padding: 10px;
+            padding-right: 10px;
+            border: 1px solid rgb(82, 90, 207);
+            border-radius: 20px;
+        }
+        
+        .contact-form .form-control {
+            outline: none;
+            border: none;
+            border-bottom: 2px solid rgb(82, 90, 207);
+            padding: 5px;
+            margin: 5% 5% 5% 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row ml-0 mr-0 mb-4 ">
+        <!--Section heading-->
+        <h2 class="col-md-12 h1-responsive font-weight-bold text-center my-4" id="av">Contactez-nous</h2>
+        <!--Section description-->
+        <p class="col-md-12 text-center w-responsive mx-auto mb-5">Avez-vous des questions? N'hésitez pas à nous contacter directement. Notre équipe reviendra vers vous dans les heures qui suivent pour vous aider</p>
+
+        <div class="col-6 row ml-auto mr-auto m-0">
+
+            <!--Grid column-->
+            <div class=" contact-form col-md-12 mb-md-0 ">
+                <form>
+
+                    <!--Grid row-->
+                    <div class="row ">
+
+                        <!--Grid column-->
+                        <div class="col-md-6 ">
+                            <div class="md-form mb-0 ">
+                                <input type="text " placeholder="Your name" class="form-control ">
+
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6 ">
+                            <div class="md-form mb-0 ">
+                                <input type="text " placeholder="Your email" class="form-control ">
+
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row ">
+                        <div class="col-md-12 ">
+                            <div class="md-form mb-0 ">
+                                <input type="text " placeholder="Subject" rows="2 " class="form-control ">
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row ">
+
+                        <!--Grid column-->
+                        <div class="col-md-12 ">
+
+                            <div class="md-form mb-0 ">
+                                <textarea type="text " placeholder="Your message" rows="2" class="form-control md-textarea "></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                </form>
+
+                <div class="text-center text-md-left ">
+                    <input class="btn btn-outline-secondary " type="submit " value="Send " onclick="document.getElementById( 'contact-form').submit(); ">
+                </div>
+                <div class="status "></div>
+            </div>
+        </div>
+    </div>
+    <footer style="background-color: black;width: 100%;height:40vh;color: white;">
+        <table row="12">
+            <tr>
+                <th></th>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+
+
+        </table>
+
+    </footer>
+</body>
+
+</html>

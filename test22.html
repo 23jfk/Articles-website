@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE HTML>
+    <html>
+
+    <head>
+        <title>
+            How to dynamically create new elements in JavaScript?
+        </title>
+    </head>
+
+    <body>
+
+
+        <!-- Form to add item -->
+        <form action="#" style="text-align:center;">
+
+            <!-- Type of Element -->
+            <label for="type">
+			Add Element Type
+		</label>
+
+            <input type="text" id="type" placeholder="Like: div, h1, li...." value="li" />
+            <br /><br />
+
+            <!-- Text/Value for the element --->
+            <label for="value">
+			Add Element Value
+		</label>
+
+            <input type="text" id="value" placeholder="Like: Hello GeeksForGeeks" value="CHILD 2" />
+            <br /><br />
+
+            <!-- Submit the Form -->
+            <button type="button" onClick="addItem()">
+			Add
+		</button>
+        </form>
+
+        <!-- Parent tag where we add
+		item as child -->
+        <ol id="parent">
+            <li>List Item 1</li>
+        </ol>
+
+        <script>
+            // Define the addItem() function
+            // to be called through onclick
+            function addItem() {
+
+                // Get type of element from form
+                let type = document.getElementById("type").value;
+                // Get the text/value for the tag
+                // from the form
+                let value = document.getElementById("value").value;
+                // createElement() is used for
+                // creating a new element
+                type = document.createElement(type);
+                // Use value as textnode in this example
+                type.appendChild(document.createTextNode(value));
+                // Append as child to the parent
+                // tag i.e. ol
+                document.getElementById("parent").appendChild(type);
+            }
+        </script>
+    </body>
+
+    </html>
+
+</body>
+
+</html>

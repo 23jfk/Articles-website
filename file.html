@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="file.css">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <!-- <div class="card" style="width: 18rem;">
+        <img class="card-img-top" id="b" alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text"><textarea class="txt" id="d" cols="30" rows="10"></textarea></p>
+            <button type="button" class="btn btn-primary add">Ajouter</button>
+        </div>
+    </div> -->
+    <!-- mndjdudud -->
+
+
+    <input type="file" id="a" value="Chosse" accept="image/*" onchange="readFile()" />
+    <img id="b" />
+    <!-- file txte -->
+    <input type="file" name="file" id="file" />
+    <!-- <input type="file" id="c" value="Chosse" accept="file/*" onchange="readFile()" /> -->
+    <textarea class="txt" id="d" cols="30" rows="10"></textarea>
+    <button type="button" class="btn btn-primary add">Ajouter</button>
+    </form>
+</body>
+<script>
+    var obj = {
+        text: "",
+        photo: ""
+    };
+
+    localStorage.setItem('blog', JSON.stringify(obj));
+
+    function readFile() {
+        var select = document.getElementById("a").files[0];
+        //read file 
+        console.log(select);
+        var reader = new FileReader();
+        reader.addEventListener("loadend", function() {
+            document.getElementById("b").src = reader.result;
+        });
+        reader.readAsDataURL(select);
+    }
+
+    function readTxte() {
+        var txte = document.getElementById("")
+    }
+
+    $(".add").click(function() {
+        var image = document.getElementById("a").files[0].name;
+        var texte = document.getElementById("d").value;
+        var loc = JSON.parse(localStorage.getItem('blog'));
+
+        texte = texte + "," + loc["text"];
+        image = image + "," + loc["photo"];
+
+        var obj = {
+            text: texte,
+            photo: image
+        };
+
+        localStorage.setItem('blog', JSON.stringify(obj));
+        var obj = JSON.parse(localStorage.getItem('blog'));
+        console.log(obj);
+    });
+</script>
+
+</html>
